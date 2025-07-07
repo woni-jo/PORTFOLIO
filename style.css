@@ -1,0 +1,152 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+}
+
+p.solid {border-style: solid;}
+
+.navbar {
+    padding: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav_title {
+    color: #C7C7C7;
+    font-size: 32px;
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+.navbar_menu {
+    color: #C7C7C7;
+    width: 260px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.container {
+    padding-bottom: 75px;
+    display: flex;
+}
+
+.container_left {
+    width: 50%;
+    margin-left: 108px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_right {
+    width: 50%;
+    padding: 10px;
+}
+
+.container_hello {
+    padding: 0px;
+    font-size: 108px;
+    font-family: "Bebas Neue", sans-serif;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 0.9;
+}
+
+.container_explanation {
+    padding: 0px;
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    color: #C7C7C7;
+}
+
+.container_icon {
+    color: white;
+    margin-top: 20px;
+    font-size: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.jb-division-line {
+  border-top: 1px solid white;
+  margin: 30px 0px;
+}
+
+.project {
+    margin-left: 108px;
+    margin-right: 108px;
+}
+
+.project_top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.project_heading {
+    padding: 0;
+    font-size: 76px;
+    font-family: "Bebas Neue", sans-serif;
+    
+}
+
+.project_subheading {
+    color: #C7C7C7;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    line-height: 0.9;
+}
+
+.project_entire {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project_left {
+    width: 50%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+}
+
+.project_right {
+    width: 50%;
+    padding: 50px;
+    padding-top: 30px;
+}
+
+.project_total{
+    font-family: "Manrope", sans-serif;
+}
+
+.project-division-line {
+  border-top: 1px solid white;
+}
