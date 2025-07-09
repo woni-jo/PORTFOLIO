@@ -103,10 +103,10 @@ section {
 }
 
 .main {
-    scroll-margin-top: 80px;
-    margin-top: 80px;
-    padding-top: 10px;
-    padding-bottom: 75px;
+    scroll-margin-top: 95px;
+    margin-top: 95px;
+    padding-top: 20px;
+    padding-bottom: 90px;
     display: flex;
     justify-items: center;
 }
