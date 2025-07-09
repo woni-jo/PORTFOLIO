@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="app.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -17,152 +18,194 @@
 </style>
 
 <body>
-    <nav class="navbar">
-        <div class="nav_title">
-            <a href="#">Woni-Jo</a>
-        </div>
-
-        <ul class="navbar_menu">
-            <li><a href="#"> Work</a></li>
-            <li><a href="#"> About</a></li>
-            <li><a href="#"> Contact</a></li>
-        </ul>
-    </nav>
-
-    <main class="container">
-        <div class="container_left">
-            <p class="container_hello">HI, I AM<br>CHO WONHEE.</p>
-            <p class="container_explanation"> 더 나은 사용자 경험을 만들기 위해, 오늘도 한 줄의 코드를 고민합니다.
-                <br>작은 개선이 쌓여 큰 변화를 만든다고 믿습니다.
-            </p>
-            <div class="container_icon">
-                <a href="#contact" class="icon-item contact-button">
-                    CONTACT ME
-                    <span class="dot"></span>
-                </a>
-                <a href="https://linkedin.com/" class="icon-item social-button" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/" class="icon-item social-button" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
+    <header class=header>
+        <nav class="navbar">
+            <div class="nav_title">
+                <a href="#">Woni-Jo</a>
             </div>
-        </div>
 
-        <div class="container_right">
-            <img style="border-radius: 20px;" src="https://placehold.co/600x700" alt="" />
-        </div>
+            <ul class="navbar_menu">
+                <li><a href="#main-section"> Main</a></li>
+                <li><a href="#project-section"> Project</a></li>
+                <li><a href="#about-section"> About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main fade-in" id="main-section" >
+            <div class="main-left">
+                <p class="main-title">HI, I AM<br>CHO WONHEE.</p>
+                <p class="main-sub-title"> 더 나은 사용자 경험을 만들기 위해, 오늘도 한 줄의 코드를 고민합니다.
+                    <br>작은 개선이 쌓여 큰 변화를 만든다고 믿습니다.
+                </p>
+                <div class="main-icon">
+                    <a href="#contact" class="icon-item contact-button">
+                        CONTACT ME
+                        <span class="dot"></span>
+                    </a>
+                    <a href="https://linkedin.com/" class="icon-item social-button" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/" class="icon-item social-button" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="main_right">
+                <img style="border-radius: 20px;" src="https://placehold.co/600x700" alt="" />
+            </div>
+
+        </section>
+
+        <div class="division-line"></div>
+
+        <section class="project fade-in" id="project-section">
+            <div class="project-top">
+                <p class="project-heading">FEATURED PROJECTS</p>
+                <p class="project-sub-heading">Here are some of the selected projects that showcase my passion
+                    for<br>
+                    back-end development.</p>
+            </div>
+
+            <article class="project-entire">
+                <div class="project-left">
+                    <img style="border-radius: 20px;" src="https://placehold.co/550x420" alt="" />
+                </div>
+                <div class="project-right">
+                    <p class="project-title"> Picture</p>
+                    <p class="project-explanation">This project is...<br>...<br>....</p>
+                    <div clss="project-section">
+                        <h3 class="project-section-title">PROJECT INFO</h3>
+                        <div class="project-info-row">
+                            <span class="info-label">Year</span>
+                            <span class="info-value">2023</span>
+                        </div>
+                        <div class="project-info-row">
+                            <span class="info-label">Role</span>
+                            <span class="info-value">Back-end Developer</span>
+                        </div>
+                        <div class="project-info-row"></div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank">
+                            LIVE DEMO
+                            <span class="icon">↗</span>
+                        </a>
+                        <a href="#" class="project-link" target="_blank">
+                            SEE ON GITHUB
+                            <span class="icon">
+                                <i class="fa-brands fa-github"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-entire">
+                <div class="project-left">
+                    <img style="border-radius: 20px;" src="https://placehold.co/550x420" alt="" />
+                </div>
+                <div class="project-right">
+                    <p class="project-title"> Picture</p>
+                    <p class="project-explanation">This project is...<br>...<br>....</p>
+                    <div clss="project-section">
+                        <h3 class="project-section-title">PROJECT INFO</h3>
+                        <div class="project-info-row">
+                            <span class="info-label">Year</span>
+                            <span class="info-value">2023</span>
+                        </div>
+                        <div class="project-info-row">
+                            <span class="info-label">Role</span>
+                            <span class="info-value">Back-end Developer</span>
+                        </div>
+                        <div class="project-info-row"></div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank">
+                            SEE ON GITHUB
+                            <span class="icon">
+                                <i class="fa-brands fa-github"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+        <div class="division-line"></div>
+
+        <section class="about fade-in" id="about-section">
+            <div class="about-me">
+                <div class="about-me-left">
+                    <p>ABOUT ME</p>
+                </div>
+                <div class="about-me-right">
+                    <p class="about-me-title ">
+                        I am a back-end developer based in Seoul.
+                        <br>Have a background in Computer Science Engineering.
+                    </p>
+                    <p class="about-me-body typewriter">
+                        저는 서울에 거주하는 백엔드 개발자 조원희입니다.<br>
+                        컴퓨터 공학을 전공했으며 시스템 설계와 문제 해결에 큰 흥미를 가지고 있습니다.<br>
+                        주로 Java와 Spring Boot를 사용하는데, 이는 대규모 서비스 개발에 필요한 방대한 생태계와 유지보수의 용이성 때문입니다.
+                        개발 외 시간에는 헬스와 농구를 즐기며, 새로운 기술과 도전을 통해 계속 성장하고자 합니다.
+                    </p>
+
+
+                    <hr class="about-me-divider" />
+
+                    <p
+                        style="color: #D3E97A; font-size: 30px; padding: 0px 0px 20px 0px; font-family: Bebas Neue, sans-serif;">
+                        Personal Information</p>
+
+                    <div class="about-me-info">
+                        <div class="about-me-info-row">
+                            <span class="about-me-info-key">Name</span>
+                            <span class="about-me-info-value">조원희</span>
+                        </div>
+                        <div class="about-me-info-row">
+                            <span class="about-me-info-key">Phone</span>
+                            <span class="about-me-info-value">000-0000-0000</span>
+                        </div>
+                        <div class="about-me-info-row">
+                            <span class="about-me-info-key">Email</span>
+                            <span class="about-me-info-value">email@email.com</span>
+                        </div>
+                        <div class="about-me-info-row">
+                            <span class="about-me-info-key">GitHub</span>
+                            <span class="about-me-info-value">https://github.com/woni-jo</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="capability">
+                <div class="capability-left">
+                    <P>My Capabilities</P>
+                </div>
+
+                <div class="capability-right">
+                    <p class="capability-body">저는 항상 새로운 기술을 배우고, 백엔드 개발 역량을 넓히기 위해 노력하고 있습니다.
+                        Java와 Spring Boot로 API 및 서버 애플리케이션을 개발해본 경험이 있으며, 이는 유지보수성과 성능을 중요하게 생각하기 때문입니다.
+                        또한 데이터베이스 설계와 쿼리 최적화에도 흥미가 많습니다.</p>
+                    <div class="tech-stack">
+                        <span class="tag">JAVA</span>
+                        <span class="tag">SPRING</span>
+                        <span class="tag">MYSQL</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
-    <div class="division-line"></div>
-
-    <section class="project">
-        <div class="project_top">
-            <p class="project_heading">FEATURED PROJECTS</p>
-            <p class="project_sub_heading">Here are some of the selected projects that showcase my passion for<br>
-                back-end development.</p>
-        </div>
-
-        <article class="project_entire">
-            <div class="project_left">
-                <img style="border-radius: 20px;" src="https://placehold.co/550x420" alt="" />
-            </div>
-            <div class="project_right">
-                <p class="project_title"> Picture</p>
-                <p class="project_explanation">This project is...<br>...<br>....</p>
-                <div clss="project_section">
-                    <h3 class="project_section_title">PROJECT INFO</h3>
-                    <div class="project_info_row">
-                        <span class="info_label">Year</span>
-                        <span class="info_value">2023</span>
-                    </div>
-
-                    <div class="project_info_row">
-                        <span class="info_label">Role</span>
-                        <span class="info_value">Back-end Developer</span>
-                    </div>
-
-                    <div class="project_info_row"></div>
-                </div>
-
-                <div class="project-links">
-                    <a href="#" class="project-link" target="_blank">
-                        LIVE DEMO
-                        <span class="icon">↗</span>
-                    </a>
-                    <a href="#" class="project-link" target="_blank">
-                        SEE ON GITHUB
-                        <span class="icon">
-                            <i class="fa-brands fa-github"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <div class="division-line"></div>
-
-    <div class="about">
-        <div class="about_me">
-            <div class="about_me_left">
-                <p>ABOUT ME</p>
-            </div>
-            <div class="about_me_right">
-                <p class="about_me_title">I am a back-end developer based in Seoul.
-                    <br>Have a background in Computer Science Engineering.
-                </p>
-                <P class="about_me_body">저는 서울에 거주하는 백엔드 개발자 조원희입니다.
-                    컴퓨터 공학을 전공했으며 시스템 설계와 문제 해결에 큰 흥미를 가지고 있습니다.
-                    주로 Java와 Spring Boot를 사용하는데,이는 대규모 서비스 개발에 필요한 방대한 생태계와 유지보수의 용이성 때문입니다.
-                    개발 외 시간에는 헬스 와 농구를 즐기며, 새로운 기술과 도전을 통해 계속 성장하고자 합니다.
-                </P>
-
-                <hr class="about_me_divider" />
-
-                <p style="font-size: 30px; padding: 0px 0px 20px 0px; font-family: Bebas Neue, sans-serif;">Personal Information</p>
-
-                <div class="about_me_info">
-                    <div class="about_me_info_row">
-                        <span class="about_me_info_key">Name</span>
-                        <span class="about_me_info_value">조원희</span>
-                    </div>
-                    <div class="about_me_info_row">
-                        <span class="about_me_info_key">Phone</span>
-                        <span class="about_me_info_value">000-0000-0000</span>
-                    </div>
-                    <div class="about_me_info_row">
-                        <span class="about_me_info_key">Email</span>
-                        <span class="about_me_info_value">email@email.com</span>
-                    </div>
-                    <div class="about_me_info_row">
-                        <span class="about_me_info_key">GitHub</span>
-                        <span class="about_me_info_value">https://github.com/woni-jo</span>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="capability">
-            <div class="capability_left">
-                <P>My Capabilities</P>
-            </div>
-
-            <div class="capability_right">
-                <p class="capability_body">저는 항상 새로운 기술을 배우고, 백엔드 개발 역량을 넓히기 위해 노력하고 있습니다.
-                    Java와 Spring Boot로 API 및 서버 애플리케이션을 개발해본 경험이 있으며, 이는 유지보수성과 성능을 중요하게 생각하기 때문입니다.
-                    또한 데이터베이스 설계와 쿼리 최적화에도 흥미가 많습니다.</p>
-                <div class="tech-stack">
-                    <span class="tag">JAVA</span>
-                    <span class="tag">SPRING</span>
-                    <span class="tag">MYSQL</span>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
+    <footer class="footer">
+        &copy; 2025 WONHEE CHO
+    </footer>
 </body>

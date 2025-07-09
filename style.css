@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -34,10 +38,23 @@ p {
 
 p.solid {border-style: solid;}
 
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.header.scrolled {
+  background-color: black;
+}
+
 .navbar {
-    width: 80%;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    width: 75%;
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,12 +64,12 @@ p.solid {border-style: solid;}
     color: #C7C7C7;
     font-size: 32px;
     font-family: "Bebas Neue", sans-serif;
-    
 }
 
 .navbar_menu {
     color: #C7C7C7;
     width: 270px;
+    padding: 0px;
     font-size: 16px;
     font-family: "Inter", sans-serif;
     display: flex;
@@ -61,61 +78,72 @@ p.solid {border-style: solid;}
     justify-content: space-around;
 }
 
-@media screen and (max-width: 769px) {
-    .navbar {
-        flex-direction : column;
-        padding : 8px 24px;
-    }
-
-    .navbar_menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.container {
-    width: 80%;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 75%;
+    scroll-margin-top: 40px;
+}
+
+.main {
+    scroll-margin-top: 80px;
+    margin-top: 80px;
     padding-top: 10px;
     padding-bottom: 75px;
     display: flex;
     justify-items: center;
 }
 
-.container_left {
-    padding: 0px 5px 0px 80px;
+.main-left {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.container_right {
+.main-right {
     width: 50%;
-    padding: 0px 30px 0px 5px;
+    padding: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
-.container_hello {
+.main-title {
     padding: 0px;
     font-size: 108px;
     font-family: "Bebas Neue", sans-serif;
     white-space: normal;
     word-wrap: break-word;
     word-break: break-all;
-    line-height: 0.9;
+    line-height: 1;
 }
 
-.container_explanation {
+.main-sub-title{
     padding: 0px;
     font-size: 18px;
     font-family: "Manrope", sans-serif;
     color: #C7C7C7;
 }
 
-.container_icon {
+.main-icon {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -168,35 +196,33 @@ p.solid {border-style: solid;}
     background-color: #2a2a2a;
 }
 
-
 .division-line {
     width: 100%;
     border-top: 1px solid white;
-    margin: 30px 0;
-    transform: scaleY(0.3); 
+    margin-top: 3px; 
+    transform: scaleY(0.5); 
     transform-origin: top;
 }
 
 .project {
-    width: 80%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     padding-bottom: 40px;
 }
 
-.project_top {
-    padding-top: 30px;
+.project-top {
+    padding-top: 50px;
     padding-bottom: 30px;
 }
 
-.project_heading {
+.project-heading {
     padding: 0;
     font-size: 76px;
     font-family: "Bebas Neue", sans-serif;
 }
 
-.project_sub_heading {
+.project-sub-heading {
     color: #C7C7C7;
     padding: 0;
     font-size: 18px;
@@ -204,13 +230,14 @@ p.solid {border-style: solid;}
     line-height: 0.9;
 }
 
-.project_entire {
-    padding-top: 50px;
+.project-entire {
+    padding-top: 60px;
+    padding-bottom: 60px;
     display: flex;
     justify-content: space-around;
 }
 
-.project_left {
+.project-left {
     width: 50%;
     padding: 70px 30px;
     border-radius: 20px;
@@ -220,14 +247,14 @@ p.solid {border-style: solid;}
     background-color: #1a1a1a;
 }
 
-.project_title {
+.project-title {
     font-size: 32px;
     color: white;
     padding: 10px 0px;
     font-family: "Manrope", sans-serif;
 }
 
-.project_explanation {
+.project-explanation {
     padding: 10px 0px;
     font-size: 18px;
     font-weight: 400;
@@ -235,39 +262,39 @@ p.solid {border-style: solid;}
     font-family: "Manrope", sans-serif;
 }
 
-.project_right {
+.project-right {
     width: 50%;
     padding: 50px;
     padding-top: 30px;
 }
 
-.project_section {
+.project-section {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     padding: 10px;
 }
 
-.project_section_title {
+.project-section-title {
     color: white;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.project_info_row {
+.project-info-row {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
     border-top: 1px solid #333;
 }
 
-.info_label {
+.info-label {
     color: white;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
 }
 
-.info_value {
+.info-value {
     color: #C7C7C7;
     font-family: 'Manrope', sans-serif;
     font-size: 16px;
@@ -312,29 +339,28 @@ p.solid {border-style: solid;}
 }
 
 .about {
-    width: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 150px;
 }
 
-.about_me {
+.about-me {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 150px;
 }
 
-.about_me_left {
+.about-me-left {
     width: 40%;
     padding: 0;
     font-size: 76px;
     font-family: "Bebas Neue", sans-serif;
 }
 
-.about_me_right {
+.about-me-right {
     width: 60%;
     padding-top: 20px;
     display: flex;
@@ -343,28 +369,55 @@ p.solid {border-style: solid;}
     
 }
 
-.about_me_title {
+.about-me-title {
     font-size: 32px;
     color: white;
     padding: 10px 0px;
 }
 
-.about_me_body {
+.about-me-body {
     padding: 10px 0px;
     font-size: 18px;
     font-weight: 400;
     color: #C7C7C7;
 }
 
-.about_me_divider {
+.typewriter {
+  overflow: hidden;
+  white-space: normal;        
+  word-break: keep-all;         
+  overflow-wrap: break-word;   
+}
+
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+  background-color: #fff;
+  visibility: hidden;         
+}
+
+.typewriter.typing-complete::after {
+  visibility: visible;
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+
+
+.about-me-divider {
     border: none;
     height: 1px;
     background-color: #333333;
     margin: 24px 0;
 }
 
-
-.about_me_info {
+.about-me-info {
     width: 70%;
     margin-left: auto;
     margin-right: 0;
@@ -373,11 +426,11 @@ p.solid {border-style: solid;}
     gap: 16px;
 }
 
-.about_me_info_box {
+.about-me-info-box {
     width: 30%;
 }
 
-.about_me_info_row {
+.about-me-info-row {
     display: flex;
     justify-content: space-between;
     background-color: #1a1a1a;
@@ -385,18 +438,17 @@ p.solid {border-style: solid;}
     border-radius: 8px;
 }
 
-.about_me_info_key {
+.about-me-info-key {
     color: #aaaaaa;
     font-weight: bold;
     font-size: 18px;
 }
 
-.about_me_info_value {
+.about-me-info-value {
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
 }
-
 
 .capability {
     width: 100%;
@@ -404,14 +456,14 @@ p.solid {border-style: solid;}
     justify-content: center;
 }
 
-.capability_left {
+.capability-left {
     width: 50%;
     padding: 0;
     font-size: 76px;
     font-family: "Bebas Neue", sans-serif;
 }
 
-.capability_right {
+.capability-right {
     width: 50%;
     padding-top: 20px;
     display: flex;
@@ -419,12 +471,24 @@ p.solid {border-style: solid;}
     font-family: "Manrope", sans-serif;
 }
 
-.capability_body {
-    padding: 10px 0px;
+.capability-body {
+    padding: 10px 0;
     font-size: 18px;
     font-weight: 400;
     color: #C7C7C7;
     font-family: "Manrope", sans-serif;
+}
+
+.tag {
+    display: inline-block;
+    padding: 16px 42px;
+    border: 1px solid #D3E97A;
+    border-radius: 999px;
+    color: #D3E97A;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .tech-stack {
@@ -434,20 +498,10 @@ p.solid {border-style: solid;}
     gap: 20px;
 }
 
-.tag {
-  display: inline-block;
-  padding: 16px 42px;
-  border: 1px solid #C7C7C7;
-  border-radius: 999px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: transparent;
-  transition: background-color 0.3s, color 0.3s;
+.footer {
+    width: 75%;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 16px 0px;
+    text-align: left;
 }
-
-/* .tag:hover {
-  background-color: #ffffff;
-  color: #000000;
-  cursor: pointer;
-} */
