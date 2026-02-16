@@ -1,0 +1,27 @@
+export type Project = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  description: string;
+  stack: string[] | string;
+  image_path: string;
+  detail_image_path?: string | null;
+  image_url: string;
+  detail_image_url?: string;
+  github_url?: string | null;
+  live_url?: string | null;
+  year: string;
+  role: string;
+  featured: boolean;
+  sort_order: number;
+  status: string;
+  team_size?: number | null;
+  problem?: string | null;
+  solution?: string | null;
+  key_results: string[];
+  tech_details?: string | null;
+  images: string[];
+  created_at?: string;
+  updated_at?: string;
+};
